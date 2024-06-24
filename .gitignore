@@ -50,7 +50,6 @@
 /parallel_tests.log
 .DS_Store
 /vendor/bundle
-/config/database.yml
 .vscode/
 .idea/
 /tmp/cache/*
