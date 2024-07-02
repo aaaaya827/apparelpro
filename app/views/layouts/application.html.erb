@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title>Apparelpro</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +12,11 @@
 
   <body>
     <%= render 'shared/header' %>
+
+    <% flash.each do |key, message| %>
+      <p class="<%= key %>"><%= message %></p>
+    <% end %>
+
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>

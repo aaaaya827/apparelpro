@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get 'static_pages/top'
+  devise_for :users
+
+  devise_scope :user do
+    get '/login', to: 'devise/sessions#new'
+  end
   resources :tasks
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

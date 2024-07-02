@@ -1,0 +1,74 @@
+body {
+    background-image: url('mediamodifier.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* ページスクロール時に背景を固定する */
+    margin: 0;
+    padding: 0;
+    position: relative; /* 相対位置を設定 */
+    min-height: 100vh; /* 最低限の高さをページ全体に設定 */
+}
+
+.login-form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* 角を少し丸くする */
+}
+
+.center-text {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.field {
+    margin-bottom: 30px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: -10px;
+    font-weight: bold;
+}
+
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+}
+
+.field-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.field-checkbox input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px; /* チェックボックスとラベルの間の距離 */
+}
+
+.actions input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    background-color: #87cefa;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.actions input[type="submit"]:hover {
+    background-color: #5f9ea0;
+}
+
+.extra-links {
+    margin-top: 20px; /* ログインボタンとリンクの距離を調整 */
+    text-align: center; /* テキストを中央に配置 */
+}

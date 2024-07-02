@@ -7,17 +7,6 @@
   background-size: cover;
 }
 
-.top-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-  z-index: 1;
-}
-
 .top-inner-text {
   position: absolute;
   top: 50%;
@@ -30,28 +19,35 @@
 
 .title {
   font-size: 4rem; /* Apparelproの文字を大きく */
-  color: #fffacd;
+  color: #ffe4c4;
 }
 
 .subtitle {
   font-size: 1.5rem; /* アパレル販売員の為の新人教育マニュアルの文字を小さく */
   margin-top: 10px;
-  color: #fffacd;
+  color: #ffe4c4;
 }
 
 .description {
-  margin-top: 40px; /* 間隔を追加 */
+  margin-top: 60px; /* 間隔を追加 */
   font-size: 1.2rem; /* フォントサイズを設定 */
   line-height: 1.5; /* 行間を設定 */
   color: #ffffff;
 }
 
-.links {
-  margin-top: 20px; /* アパレル販売員の為の新人教育マニュアルとログインはこちらの間隔を追加 */
+.button {
+  margin-top: 60px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #b0e0e6;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.links a {
-  color: #ff6347; /* リンクの色を設定 */
+.button:hover {
+  background-color: #87ceeb;
 }
 
 @media screen and (max-width: 767px) {
@@ -72,7 +68,9 @@
       font-size: 1rem; /* フォントサイズを設定 */
   }
 
-  .links {
-      margin-top: 10px; /* モバイル用の間隔を追加 */
+  .button {
+    margin-top: 20px; /* モバイル用の間隔を調整 */
+    font-size: 14px; /* フォントサイズを小さくする */
+    padding: 8px 16px; /* パディングを小さくする */
   }
 }
