@@ -35,16 +35,15 @@
 <body>
   <header>
     <nav class='navbar navbar-expand-lg navigation'>
-      <span class='navbar-brand'>Apparelpro</span>
+      <a href="<%= root_path %>" class='navbar-brand'>Apparelpro</a>
       <span class='navbar-subtitle'>アパレル販売員の為の新人教育マニュアル</span>
-      
       <button class='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
         <span class='navbar-toggler-icon'></span>
       </button>
       <div class='collapse navbar-collapse' id='navbarSupportedContent'>
         <ul class='navbar-nav ms-auto main-nav align-items-center'></ul>
         <a href='#' class='link'>新規登録</a>
-        <a href='#' class='link'>ログイン</a>
+        <a href="<%= login_path %>" class='link'>ログイン</a>
       </div>
     </nav>
   </header>
