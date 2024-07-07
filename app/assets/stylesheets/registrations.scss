@@ -1,4 +1,4 @@
-.login-background {
+.signup-background {
     background-image: url('mediamodifier.jpg'); /* 背景画像の設定 */
     background-position: center;
     background-size: cover;
@@ -14,19 +14,19 @@
     box-sizing: border-box; /* 内部の余白や枠線のサイズを全体のサイズに含める */
 }
 
-.login-form-container {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 40px 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px; /* 角を少し丸くする */
+.signup-form-container {
+    border: 2px solid #ccc; /* 枠線の色と太さ */
+    border-radius: 10px; /* 角を丸くする */
+    padding: 20px; /* 内側の余白 */
+    max-width: 500px; /* 最大幅 */
+    margin: 0 auto; /* 中央に配置 */
+    background-color: #f9f9f9; /* 背景色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
 }
 
 .center-text {
-    margin-top: 80px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -40,6 +40,7 @@
     font-weight: bold;
 }
 
+.field input[type="text"],
 .field input[type="email"],
 .field input[type="password"],
 .field input[type="checkbox"] {
@@ -71,9 +72,4 @@
 
 .actions input[type="submit"]:hover {
     background-color: #5f9ea0;
-}
-
-.extra-links {
-    margin-top: 20px; /* ログインボタンとリンクの距離を調整 */
-    text-align: center; /* テキストを中央に配置 */
 }
