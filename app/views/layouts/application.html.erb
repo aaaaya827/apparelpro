@@ -13,9 +13,7 @@
   <body>
     <%= render 'shared/header' %>
 
-    <% flash.each do |key, message| %>
-      <p class="<%= key %>"><%= message %></p>
-    <% end %>
+    <%= render 'shared/flash_message' %>
 
     <%= yield %>
     <%= render 'shared/footer' %>
