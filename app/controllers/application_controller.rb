@@ -6,7 +6,7 @@ def configure_permitted_parameters
 end
 
 def after_sign_in_path_for(resource)
-    manuals_index_path
+    manuals_path
 end
 
 end
