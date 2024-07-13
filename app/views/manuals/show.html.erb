@@ -1,6 +1,7 @@
-<h1><%= params[:category] %> のマニュアル</h1>
+<div class="manual-list">
 <% @manuals.each do |manual| %>
 <h2><%= manual.title %></h2>
-<p><%= manual.content %></p>
+<p><%= simple_format(manual.content) %></p>
 <% end %>
 <%= link_to '完了', manuals_path, class: "btn btn-secondary" %>
+</div>
