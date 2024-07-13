@@ -14,24 +14,24 @@
 }
 
 .manual-list h1 {
-    margin: -50;
-    padding: 10px;
+    margin: -20;
+    padding: 5px;
     color: #696969;
     border-radius: 10px;
 }
 
 .category-button {
-    font-size: 1.5em;
+    font-size: 1.2em;
     background-color: rgba(255, 255, 255, 0.4);
     color: #696969;
-    margin: 10px;
-    padding: 10px 0; /* ボタンのパディングを調整する */
+    margin: 5px;
+    padding: 5px 0; /* ボタンのパディングを調整する */
     border-radius: 5px; /* ボタンの角を丸くする */
     text-decoration: none; /* ボタンのテキスト装飾を削除する */
-    border: 2px solid #9acd32; /* 黄緑のふちを追加する */
+    border: 1px solid #9acd32; /* 黄緑のふちを追加する */
     outline: none; /* フォーカスリングを削除する */
     box-shadow: none; /* ボタンのシャドウを削除する */
-    width: 400px; /* ボタンの幅を統一する */
+    width: 300px; /* ボタンの幅を統一する */
     text-align: center; /* テキストを中央揃えにする */
 }
 
