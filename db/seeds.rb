@@ -1,5 +1,5 @@
-Manual.find_or_create_by(title: '『ブランドを知ろう』') do |manual|
-    manual.content = 'ブランドとは企業や製品、サービスが持つ独自の価値や個性を表現する総合的な概念です。
+manuals = [
+{ title: '『ブランドを知ろう』', content: 'ブランドとは企業や製品、サービスが持つ独自の価値や個性を表現する総合的な概念です。
     自社のHPや資料を通じてブランドコンセプトを知りましょう。（先輩社員が直接資料を元に伝えるように）
 
     ① ブランドが生まれた背景とは？
@@ -18,17 +18,21 @@ Manual.find_or_create_by(title: '『ブランドを知ろう』') do |manual|
     ・主力製品やサービス、その特徴や強みを理解しましょう。
 
     これらのポイントを押さえてブランドコンセプトを理解することで、
-    他ブランドとの違いを理解でき、お客様に自社ブランドの価値を提供できます。'
-    manual.category = '1. ブランドを知ろう'
-end
+    他ブランドとの違いを理解でき、お客様に自社ブランドの価値を提供できます。', category: '1. ブランドを知ろう' },
+{ title: '接客の基本', content: 'ここに内容を記述', category: '2. 試着会' },
+{ title: '接客の基本', content: 'ここに内容を記述', category: '3. 基本的な敬語を知ろう' },
+{ title: '接客の基本', content: 'ここに内容を記述', category: '4. 素材を知ろう' },
+{ title: '接客の基本', content: 'ここに内容を記述', category: '5. お洋服を知ろう' },
+{ title: '接客の基本', content: 'ここに内容を記述', category: '6. 接客の基本①' },
+{ title: '接客の基本', content: 'ここに内容を記述', category: '7. 接客の基本②' },
+{ title: '接客の基本', content: 'ここに内容を記述', category: '8. レジまわりの操作' }
+]
 
-Manual.create(title: '接客の基本', content: 'ここに内容を記述', category: '2. 試着会')
-Manual.create(title: '接客の基本', content: 'ここに内容を記述', category: '2. 基本的な敬語を知ろう')
-Manual.create(title: '接客の基本', content: 'ここに内容を記述', category: '3. 素材を知ろう')
-Manual.create(title: '接客の基本', content: 'ここに内容を記述', category: '4. お洋服を知ろう')
-Manual.create(title: '接客の基本', content: 'ここに内容を記述', category: '5. 接客の基本①')
-Manual.create(title: '接客の基本', content: 'ここに内容を記述', category: '6. 接客の基本②')
-Manual.create(title: '接客の基本', content: 'ここに内容を記述', category: '7. レジまわりの操作')
+manuals.each do |manual_attributes|
+    manual = Manual.find_or_initialize_by(title: manual_attributes[:title], category: manual_attributes[:category])
+    manual.content = manual_attributes[:content]
+    manual.save
+end
 
 
 # This file should ensure the existence of records required to run the application in every environment (production,
