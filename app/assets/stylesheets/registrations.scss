@@ -15,23 +15,23 @@
 }
 
 .signup-form-container {
-    border: 2px solid #ccc; /* 枠線の色と太さ */
-    border-radius: 10px; /* 角を丸くする */
-    padding: 20px; /* 内側の余白 */
-    max-width: 200px; /* 最大幅 */
+    border: 1px solid #ccc; /* 枠線の色と太さ */
+    border-radius: 5px; /* 角を丸くする */
+    padding: 10px; /* 内側の余白 */
+    max-width: 150px; /* 最大幅 */
     margin: 0 auto; /* 中央に配置 */
     background-color: #f9f9f9; /* 背景色 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を追加 */
 }
 
 .center-text {
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .field {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .field label {
@@ -45,7 +45,7 @@
 .field input[type="password"],
 .field input[type="checkbox"] {
     width: 100%;
-    padding: 8px;
+    padding: 6px;
     border: 1px solid #ced4da;
 }
 
@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .field-checkbox input[type="checkbox"] {
