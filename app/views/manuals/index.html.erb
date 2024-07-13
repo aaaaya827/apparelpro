@@ -1,0 +1,6 @@
+<div class="manual-list">
+<h1>マニュアル一覧</h1>
+<% @categories.each do |manual| %>
+    <%= link_to manual.category, category_manuals_path(manual.category), class: "btn btn-primary category-button" %>
+<% end %>
+</div>
