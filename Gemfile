@@ -70,4 +70,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "rspec"
+  gem "rubocop", require: false
 end
