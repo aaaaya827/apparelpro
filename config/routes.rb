@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
 
@@ -8,9 +10,9 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :tasks
 
-  get "up" => "rails/health#show", as: :rails_health_check
+  get 'up' => 'rails/health#show', as: :rails_health_check
 
-  resources :manuals, only: [:index, :show], param: :category
+  resources :manuals, only: %i[index show], param: :category
 
   root 'static_pages#top'
 end
