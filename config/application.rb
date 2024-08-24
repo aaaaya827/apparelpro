@@ -1,3 +1,4 @@
+# Myappアプリケーションの設定を管理するクラスです。
 # frozen_string_literal: true
 
 require_relative 'boot'

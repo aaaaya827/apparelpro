@@ -1,3 +1,4 @@
+# UsersControllerは、ユーザー関連の処理を管理します。
 # frozen_string_literal: true
 
 class UsersController < ApplicationController

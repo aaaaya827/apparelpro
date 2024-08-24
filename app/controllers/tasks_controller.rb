@@ -1,3 +1,4 @@
+# TasksControllerは、タスクに関連するアクションを処理します。
 # frozen_string_literal: true
 
 class TasksController < ApplicationController

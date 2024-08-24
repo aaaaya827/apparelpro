@@ -1,3 +1,4 @@
+# ApplicationControllerは、全てのコントローラーの基本機能を提供します。
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
