@@ -1,5 +1,5 @@
-# ユーザー情報を管理するモデルです。
 # frozen_string_literal: true
+# User model represents the users of the application.
 
 class User < ApplicationRecord
   # Include default devise modules. Others available are:

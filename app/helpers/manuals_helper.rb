@@ -1,5 +1,5 @@
-# ManualsHelperは、マニュアルに関連するヘルパーメソッドを提供します。
 # frozen_string_literal: true
+# ManualsHelper provides helper methods related to manuals.
 
 module ManualsHelper
 end

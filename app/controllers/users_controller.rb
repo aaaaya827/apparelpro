@@ -1,5 +1,5 @@
-# UsersControllerは、ユーザー関連の処理を管理します。
 # frozen_string_literal: true
+# UsersController handles user management actions.
 
 class UsersController < ApplicationController
   def show

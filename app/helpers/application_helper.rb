@@ -1,5 +1,5 @@
-# ApplicationHelperは、アプリケーション全体で使用されるヘルパーメソッドを提供します。
 # frozen_string_literal: true
+# ApplicationHelper provides helper methods for views across the application.
 
 module ApplicationHelper
 end

@@ -1,5 +1,5 @@
-# 全てのモデルに共通する機能を提供する基底クラスです。
 # frozen_string_literal: true
+# ApplicationRecord is the base model class from which all models inherit.
 
 class ApplicationRecord < ActiveRecord::Base
   primary_abstract_class

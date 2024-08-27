@@ -1,4 +1,4 @@
-# ManualsControllerは、マニュアルに関連するアクションを管理します。
+# ManualsController handles actions related to manuals management.
 # frozen_string_literal: true
 
 class ManualsController < ApplicationController

@@ -1,5 +1,5 @@
-# StaticPagesControllerは、静的なページに関する処理を行います。
 # frozen_string_literal: true
+# StaticPagesController is responsible for rendering static pages.
 
 class StaticPagesController < ApplicationController
   def top; end

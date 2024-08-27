@@ -1,5 +1,5 @@
-# ApplicationControllerは、全てのコントローラーの基本機能を提供します。
 # frozen_string_literal: true
+# ApplicationController is the base controller class that all other controllers inherit from.
 
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?

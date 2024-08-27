@@ -1,5 +1,5 @@
-# TasksControllerは、タスクに関連するアクションを処理します。
 # frozen_string_literal: true
+# TasksController manages task-related actions.
 
 class TasksController < ApplicationController
   before_action :set_task, only: %i[show edit update destroy]
