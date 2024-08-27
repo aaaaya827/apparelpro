@@ -1,6 +1,6 @@
-# ManualsController handles actions related to manuals management.
 # frozen_string_literal: true
 
+# ManualsController handles actions related to manuals management.
 class ManualsController < ApplicationController
   def index
     @categories = Manual.select(:category).distinct.order(:category)
