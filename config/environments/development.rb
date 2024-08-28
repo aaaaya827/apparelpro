@@ -2,6 +2,14 @@
 
 require 'active_support/core_ext/integer/time'
 
+def setup_active_storage
+  config.active_storage.service = :local
+end
+
+def setup_action_mailer
+  config.action_mailer.raise_delivery_errors = false
+end
+
 Rails.application.configure do
   setup_active_storage
   setup_action_mailer
@@ -10,14 +18,6 @@ Rails.application.configure do
   configure_error_reporting
   configure_server_timing
   configure_cache
-end
-
-def setup_active_storage
-  config.active_storage.service = :local
-end
-
-def setup_action_mailer
-  config.action_mailer.raise_delivery_errors = false
 end
 
 def configure_reloading

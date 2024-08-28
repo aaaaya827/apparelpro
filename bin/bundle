@@ -7,7 +7,7 @@
 # The application 'bundle' is installed as part of a gem, and
 # this file is here to facilitate running it.
 #
-
+# This class represents the main functionality of the application
 require 'rubygems'
 
 m = Module.new do
@@ -45,7 +45,7 @@ m = Module.new do
   end
 
   def find_bundler_version(arg, update_index, index)
-    if update_index && update_index.succ == index && arg.match?(Gem::Version::ANCHORED_VERSION_PATTERN)
+    do_something if update_index && update_index.succ == index && arg.match?(Gem::Version::ANCHORED_VERSION_PATTERN)
       return arg
     end
 
@@ -82,7 +82,7 @@ m = Module.new do
   end
 
   def bundler_requirement
-    @bundler_requirement ||= begin
+    @bundler_requirement ||= # 処理
       env_var_version || cli_arg_version || bundler_requirement_for(lockfile_version)
     end
   end
