@@ -3,24 +3,37 @@
 require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+  setup_active_storage
+  setup_action_mailer
 
-  # In the development environment your application's code is reloaded any time
-  # it changes. This slows down response time but is perfect for development
-  # since you don't have to restart the web server when you make code changes.
+  configure_reloading
+  configure_error_reporting
+  configure_server_timing
+  configure_cache
+end
+
+def setup_active_storage
+  config.active_storage.service = :local
+end
+
+def setup_action_mailer
+  config.action_mailer.raise_delivery_errors = false
+end
+
+def configure_reloading
   config.enable_reloading = true
-
-  # Do not eager load code on boot.
   config.eager_load = false
+end
 
-  # Show full error reports.
+def configure_error_reporting
   config.consider_all_requests_local = true
+end
 
-  # Enable server timing
+def configure_server_timing
   config.server_timing = true
+end
 
-  # Enable/disable caching. By default caching is disabled.
-  # Run rails dev:cache to toggle caching.
+def configure_cache
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
@@ -31,9 +44,9 @@ Rails.application.configure do
     }
   else
     config.action_controller.perform_caching = false
-
     config.cache_store = :null_store
   end
+end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local

@@ -22,19 +22,34 @@ m = Module.new do
   end
 
   def cli_arg_version
-    return unless invoked_as_script? # don't want to hijack other binstubs
-    return unless 'update'.start_with?(ARGV.first || ' ') # must be running `bundle update`
+    return unless invoked_as_script?
+    return unless update_command?
 
+    extract_bundler_version_from_args
+  end
+
+  def update_command?
+    'update'.start_with?(ARGV.first || ' ')
+  end
+
+  def extract_bundler_version_from_args
     bundler_version = nil
     update_index = nil
-    ARGV.each_with_index do |a, i|
-      bundler_version = a if update_index && update_index.succ == i && a.match?(Gem::Version::ANCHORED_VERSION_PATTERN)
-      next unless a =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
 
-      bundler_version = Regexp.last_match(1)
-      update_index = i
+    ARGV.each_with_index do |arg, index|
+      bundler_version = find_bundler_version(arg, update_index, index)
+      update_index = index if arg =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
     end
+
     bundler_version
+  end
+
+  def find_bundler_version(arg, update_index, index)
+    if update_index && update_index.succ == index && arg.match?(Gem::Version::ANCHORED_VERSION_PATTERN)
+      return arg
+    end
+
+    Regexp.last_match(1) if arg =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
   end
 
   def gemfile
@@ -45,59 +60,72 @@ m = Module.new do
   end
 
   def lockfile
-    lockfile =
-      case File.basename(gemfile)
-      when 'gems.rb' then gemfile.sub(/\.rb$/, '.locked')
-      else "#{gemfile}.lock"
-      end
-    File.expand_path(lockfile)
+    case File.basename(gemfile)
+    when 'gems.rb'
+      gemfile.sub(/\.rb$/, '.locked')
+    else
+      "#{gemfile}.lock"
+    end
   end
 
   def lockfile_version
     return unless File.file?(lockfile)
 
     lockfile_contents = File.read(lockfile)
-    return unless lockfile_contents =~ /\n\nBUNDLED WITH\n\s{2,}(#{Gem::Version::VERSION_PATTERN})\n/
+    extract_version_from_lockfile(lockfile_contents)
+  end
+
+  def extract_version_from_lockfile(contents)
+    return unless contents =~ /\n\nBUNDLED WITH\n\s{2,}(#{Gem::Version::VERSION_PATTERN})\n/
 
     Regexp.last_match(1)
   end
 
   def bundler_requirement
-    @bundler_requirement ||=
-      env_var_version ||
-      cli_arg_version ||
-      bundler_requirement_for(lockfile_version)
+    @bundler_requirement ||= begin
+      env_var_version || cli_arg_version || bundler_requirement_for(lockfile_version)
+    end
   end
 
   def bundler_requirement_for(version)
     return "#{Gem::Requirement.default}.a" unless version
 
-    bundler_gem_version = Gem::Version.new(version)
-
-    bundler_gem_version.approximate_recommendation
+    Gem::Version.new(version).approximate_recommendation
   end
 
   def load_bundler!
     ENV['BUNDLE_GEMFILE'] ||= gemfile
-
     activate_bundler
   end
 
   def activate_bundler
-    gem_error = activation_error_handling do
-      gem 'bundler', bundler_requirement
-    end
+    gem_error = activation_error_handling { gem 'bundler', bundler_requirement }
     return if gem_error.nil?
 
-    require_error = activation_error_handling do
-      require 'bundler/version'
-    end
-    if require_error.nil? && Gem::Requirement.new(bundler_requirement).satisfied_by?(Gem::Version.new(Bundler::VERSION))
+    handle_activation_error(gem_error)
+  end
+
+  def handle_activation_error(gem_error)
+    require_error = activation_error_handling { require 'bundler/version' }
+    if require_error.nil? && bundler_version_satisfies_requirement?
       return
     end
 
-    warn "Activating bundler (#{bundler_requirement}) failed:\n#{gem_error.message}\n\nTo install the version of bundler this project requires, run `gem install bundler -v '#{bundler_requirement}'`"
+    display_activation_warning(gem_error)
     exit 42
+  end
+
+  def bundler_version_satisfies_requirement?
+    Gem::Requirement.new(bundler_requirement).satisfied_by?(Gem::Version.new(Bundler::VERSION))
+  end
+
+  def display_activation_warning(gem_error)
+    warn <<~WARNING
+      Activating bundler (#{bundler_requirement}) failed:
+      #{gem_error.message}
+
+      To install the version of bundler this project requires, run `gem install bundler -v '#{bundler_requirement}'`
+    WARNING
   end
 
   def activation_error_handling

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This migration creates manuals
 class CreateManuals < ActiveRecord::Migration[7.1]
   def change
     create_table :manuals do |t|

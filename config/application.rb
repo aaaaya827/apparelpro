@@ -1,6 +1,6 @@
-# Myappアプリケーションの設定を管理するクラスです。
 # frozen_string_literal: true
 
+# Myapp Application class
 require_relative 'boot'
 
 require 'rails/all'
