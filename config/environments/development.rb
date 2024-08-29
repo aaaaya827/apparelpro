@@ -1,52 +1,39 @@
 # frozen_string_literal: true
 
-require 'active_support/core_ext/integer/time'
-
-def setup_active_storage
-  config.active_storage.service = :local
-end
-
-def setup_action_mailer
-  config.action_mailer.raise_delivery_errors = false
-end
+require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  setup_active_storage
-  setup_action_mailer
+  # Settings specified here will take precedence over those in config/application.rb.
 
-  configure_reloading
-  configure_error_reporting
-  configure_server_timing
-  configure_cache
-end
-
-def configure_reloading
+  # In the development environment your application's code is reloaded any time
+  # it changes. This slows down response time but is perfect for development
+  # since you don't have to restart the web server when you make code changes.
   config.enable_reloading = true
+
+  # Do not eager load code on boot.
   config.eager_load = false
-end
 
-def configure_error_reporting
+  # Show full error reports.
   config.consider_all_requests_local = true
-end
 
-def configure_server_timing
+  # Enable server timing
   config.server_timing = true
-end
 
-def configure_cache
-  if Rails.root.join('tmp/caching-dev.txt').exist?
+  # Enable/disable caching. By default caching is disabled.
+  # Run rails dev:cache to toggle caching.
+  if Rails.root.join("tmp/caching-dev.txt").exist?
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+      "Cache-Control" => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
+
     config.cache_store = :null_store
   end
-end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local

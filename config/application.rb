@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Myapp Application class
+# Myapp::Application class
 # This class is responsible for configuring the Rails application.
 require_relative 'boot'
 
