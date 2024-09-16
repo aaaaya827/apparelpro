@@ -1,12 +1,15 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'questions/new'
+  get 'questions/create'
   devise_for :users
 
   devise_scope :user do
     get '/login', to: 'devise/sessions#new'
   end
 
+  resources :questions, only: [:index, :new, :create, :show]
   resources :users, only: :show
   resources :tasks
 
