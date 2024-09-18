@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get '/login', to: 'devise/sessions#new'
   end
 
-  resources :questions, only: [:index, :new, :create, :show]
+  resources :questions, only: [:index, :new, :create, :show, :destroy, :edit, :update]
   resources :users, only: :show
   resources :tasks
 
