@@ -5,7 +5,8 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    redirect_to edit_question_path(@question)
+    @comment = Comment.new
+    @comments = @question.comments.includes(:user).order(created_at: :desc)
   end
 
   def new
