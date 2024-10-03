@@ -3,7 +3,9 @@
 Rails.application.routes.draw do
   get 'questions/new'
   get 'questions/create'
-  devise_for :users
+  devise_for :users, controllers: {
+    passwords: 'users/passwords'
+  }
 
   devise_scope :user do
     get '/login', to: 'devise/sessions#new'
