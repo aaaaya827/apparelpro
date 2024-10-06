@@ -30,7 +30,26 @@
     .link:hover {
       text-decoration: underline;
     }
-  </style>
+
+    .nav-link {
+    margin-right: 20px;
+    color: #a9a9a9;                // ナビゲーションリンクの色
+    text-decoration: none;         // デフォルトの下線を消す
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;    // ホバー時に下線を表示
+  }
+
+  .dropdown-item {
+    color: #a9a9a9;                // ドロップダウンメニューの項目の色
+    text-decoration: none;         // デフォルトの下線を消す
+  }
+
+  .dropdown-item:hover {
+    text-decoration: underline;     // ホバー時に下線を表示
+  }
+</style>
 </head>
 <body>
   <header>
@@ -41,16 +60,33 @@
         <span class='navbar-toggler-icon'></span>
       </button>
       <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-        <ul class='navbar-nav ms-auto main-nav align-items-center'></ul>
-        <% if user_signed_in? %>
-          <%= link_to "#{current_user.name}さん", user_path(current_user), class: 'link' %>
-          <%= link_to "質問一覧", '#', class: 'link' %>
-          <%= link_to "マニュアル一覧", manuals_path, class: 'link' %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'link' %>
-        <% else %>
-          <%= link_to '新規登録', new_user_registration_path, class: 'link' %>
-          <%= link_to 'ログイン', login_path, class: 'link' %>
-        <% end %>
+        <ul class='navbar-nav ms-auto main-nav align-items-center'>
+          <% if user_signed_in? %>
+            <li class='nav-item'>
+              <%= link_to "#{current_user.name}さん", user_path(current_user), class: 'link' %>
+            </li>
+            <li class='nav-item dropdown'>
+              <%= link_to '質問', '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' } %>
+              <div class='dropdown-menu dropdown-menu-end'>
+                <%= link_to '質問投稿一覧', questions_path, class: 'dropdown-item' %>
+                <%= link_to '質問作成', questions_new_path, class: 'dropdown-item' %>
+              </div>
+            </li>
+            <li class='nav-item'>
+              <%= link_to "マニュアル一覧", manuals_path, class: 'link' %>
+            </li>
+            <li class='nav-item'>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'link' %>
+            </li>
+          <% else %>
+            <li class='nav-item'>
+              <%= link_to '新規登録', new_user_registration_path, class: 'link' %>
+            </li>
+            <li class='nav-item'>
+              <%= link_to 'ログイン', login_path, class: 'link' %>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </nav>
   </header>

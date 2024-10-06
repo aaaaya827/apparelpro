@@ -1,0 +1,19 @@
+.password-reset {
+    color: rgba(128, 128, 128, 0.6);
+    text-align: center; /* 中央揃え */
+    margin-bottom: 20px; /* ヘッダーとフォームの距離を調整 */
+    margin-top: 110px;
+}
+
+.password-reset-form {
+    max-width: 500px; /* フォームの最大幅を設定 */
+    margin: 0 auto; /* 中央に配置 */
+}
+
+.email-label {
+    color: rgba(128, 128, 128, 0.6); /* グレーっぽい色に設定 */
+}
+
+.newpassword-label {
+    color: rgba(128, 128, 128, 0.6); /* グレーっぽい色に設定 */
+}
