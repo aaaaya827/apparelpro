@@ -1,0 +1,30 @@
+<h1 class="question-title">質問編集</h1>
+
+<div class="edit-container">
+    <%= form_with(model: @question, local: true) do |form| %>
+    <% if @question.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+            <ul>
+                <% @question.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <div class="edit-group mb-3">
+        <%= form.label :title, "タイトル", class: "form-label" %>
+        <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="edit-group mb-3">
+        <%= form.label :body, "本文", class: "form-label" %>
+        <%= form.text_area :body, class: "form-control" %>
+    </div>
+
+    <div class="button-container">
+        <%= form.submit "更新", class: "btn btn-primary" %>
+    </div>
+    <% end %>
+</div>
