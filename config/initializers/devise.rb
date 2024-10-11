@@ -127,11 +127,11 @@ Devise.setup do |config|
   # Set up a pepper to generate the hashed password.
   # config.pepper = 'd91d918df37ea506e49d84de80c55abbef01fe464284edf97a3e3435c50e7539f8bca416a408e107e0c2c740de6026f62698119483dfab8822152d257c900f34'
 
-  # Send a notification to the original email when the user's email is changed.
-  # config.send_email_changed_notification = false
+  # ユーザーの電子メールが変更されたときに、元の電子メールに通知を送信します。
+  config.send_email_changed_notification = true
 
-  # Send a notification email when the user's password is changed.
-  # config.send_password_change_notification = false
+  # ユーザーのパスワードが変更されたときに通知メールを送信します。
+  config.send_password_change_notification = true
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without

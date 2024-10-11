@@ -1,3 +1,4 @@
+/* パスワードリセット */
 .password-reset {
     color: rgba(128, 128, 128, 0.6);
     text-align: center; /* 中央揃え */
@@ -16,4 +17,47 @@
 
 .newpassword-label {
     color: rgba(128, 128, 128, 0.6); /* グレーっぽい色に設定 */
+}
+
+/* アカウント編集（メールアドレス変更） */
+.account-edit {
+    color: rgba(128, 128, 128, 0.6);
+    text-align: center; /* 中央揃え */
+    margin-bottom: 10px; /* ヘッダーとフォームの距離を調整 */
+    margin-top: 80px;
+}
+
+.account-edit-form {
+    max-width: 400px; /* フォームの最大幅を設定 */
+    margin: 0 auto; /* 中央に配置 */
+}
+
+.email-label {
+    color: rgba(128, 128, 128, 0.6);
+}
+
+.newpassword-label {
+    color: rgba(128, 128, 128, 0.6);
+}
+
+.note-text {
+    color: rgba(128, 128, 128, 0.6);
+}
+
+.cancel-message {
+    text-align: center;
+    color: rgba(128, 128, 128, 0.6);
+    margin-top: 10px;
+}
+
+.custom-button {
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.6);
+    margin-top: 10px;
+}
+
+.back-link {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
 }

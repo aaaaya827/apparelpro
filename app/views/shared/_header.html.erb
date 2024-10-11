@@ -63,7 +63,7 @@
         <ul class='navbar-nav ms-auto main-nav align-items-center'>
           <% if user_signed_in? %>
             <li class='nav-item'>
-              <%= link_to "#{current_user.name}さん", user_path(current_user), class: 'link' %>
+              <%= link_to "#{current_user.name}さん", edit_user_registration_path, class: 'link' %>
             </li>
             <li class='nav-item dropdown'>
               <%= link_to '質問', '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' } %>
