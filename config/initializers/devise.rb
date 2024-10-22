@@ -15,7 +15,6 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '009493037d48c7eae36f3983cf2ab0eebed35a1970159a6b56ffca1b0fb236631b3a66773d66fba801f82ef930fa3e61a6954e6dc9c11fa22e10d881596b0354'
-
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -24,7 +23,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten ifCouldn't find User with 'id'=sign_out you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = ENV.fetch('MAILER_SENDER')
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -128,11 +127,11 @@ Devise.setup do |config|
   # Set up a pepper to generate the hashed password.
   # config.pepper = 'd91d918df37ea506e49d84de80c55abbef01fe464284edf97a3e3435c50e7539f8bca416a408e107e0c2c740de6026f62698119483dfab8822152d257c900f34'
 
-  # Send a notification to the original email when the user's email is changed.
-  # config.send_email_changed_notification = false
+  # ユーザーの電子メールが変更されたときに、元の電子メールに通知を送信します。
+  config.send_email_changed_notification = true
 
-  # Send a notification email when the user's password is changed.
-  # config.send_password_change_notification = false
+  # ユーザーのパスワードが変更されたときに通知メールを送信します。
+  config.send_password_change_notification = true
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -272,6 +271,10 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :google_oauth2, ENV.fetch('GOOGLE_CLIENT_ID', nil), ENV.fetch('GOOGLE_CLIENT_SECRET', nil), {
+    scope: 'userinfo.email, userinfo.profile',
+    prompt: 'select_account'
+  }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
