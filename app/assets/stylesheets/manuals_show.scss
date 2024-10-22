@@ -5,12 +5,16 @@
     position: relative;
     background-position: center;
     background-size: cover;
+    overflow-y: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    padding-top: 100px; /* ヘッダーの高さ */
+    padding-bottom: 67px; /* フッターの高さ */
 }
 
 .manual-content {

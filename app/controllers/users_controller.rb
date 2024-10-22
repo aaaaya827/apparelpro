@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# UsersController handles user management actions.
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
@@ -6,7 +9,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    #ストロングパラメータで、名前とメールを受け取ることができるように設定しておく。
+    # ストロングパラメータで、名前とメールを受け取ることができるように設定しておく。
     params.require(:user).permit(:name, :email)
   end
 end
