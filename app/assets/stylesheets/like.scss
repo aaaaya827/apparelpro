@@ -1,0 +1,16 @@
+.like-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: none; /* 背景をなくす */
+    border: none; /* ボーダーをなくす */
+    color: black; /* 初期の色を黒に */
+    font-size: 24px; /* ハートのサイズを指定 */
+    cursor: pointer; /* マウスカーソルをポインターに */
+}
+
+.like-button-click {
+    color: white; /* クリック後のハートの色を白に変更 */
+    background-color: red; /* クリック後の背景色を赤に変更 */
+    border-radius: 5px; /* ボタンの角を丸くするオプション */
+}
