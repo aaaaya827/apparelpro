@@ -1,0 +1,12 @@
+<div class="row mb-3" id="comment-form">
+<div class="col-lg-8 offset-lg-2">
+    <%= turbo_frame_tag 'new_comment' do %>
+    <%= form_with model: @comment, url: question_comments_path(@question), local: false, html: { id: 'comment-form', data: { remote: true } } do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :body, "コメント作成", class: "form-label" %>
+        <%= f.text_area :body, class: "form-control mb-3 comment-textarea", rows: "4", placeholder: "コメント" %>
+        <%= f.submit "投稿", class: "btn btn-primary btn-submit" %>
+    <% end %>
+    <% end %>
+</div>
+</div>
