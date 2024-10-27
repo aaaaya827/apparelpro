@@ -1,0 +1,98 @@
+h1 {
+    text-align: center; /* 中央寄せにする */
+    margin-top: 30px; /* 上のマージンを追加して距離をあける */
+}
+
+.form-container {
+    width: 550px; /* 幅を大きくする */
+    margin: 70px auto 0; /* 上に150pxのマージンを追加 */
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px; /* 各フォームグループの間隔をあける */
+    text-align: left; /* 本文を左寄せにするため、明示的に指定 */
+}
+
+.form-group textarea {
+    width: 100%; /* 幅を親要素に合わせる */
+    height: 130px; /* 高さを調整して広げる */
+}
+
+.button-container {
+    text-align: center; /* クリックボックスを中央寄せにする */
+}
+
+ /* 質問投稿一覧 */
+.title {
+    text-align: center;
+    margin: 2rem 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.question-card {
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #333;
+
+    .link {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            color: #007bff;
+        }
+    }
+}
+
+.buttons {
+    .btn {
+        &.btn-outline-secondary {
+            border-color: #6c757d;
+        }
+
+        &.btn-outline-danger {
+            border-color: #dc3545;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.meta {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.body {
+    margin-top: 1rem;
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.no-questions {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}

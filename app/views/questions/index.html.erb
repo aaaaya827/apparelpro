@@ -1,0 +1,38 @@
+<h1 class="title">質問一覧</h1>
+<div class="row">
+<div class="col-12">
+    <div class="row">
+    <% if @questions.present? %>
+        <% @questions.each do |question| %>
+        <div class="col-sm-12 col-lg-3 mb-4">
+            <div id="question-<%= question.id %>" class="card question-card">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                <h4 class="title">
+                    <%= link_to question.title, question_path(question), class: "link" %>
+                </h4>
+                <div class="ms-auto d-flex buttons">
+                    <%= link_to '#', id: "edit-#{question.id}", class: "btn btn-outline-secondary btn-sm mx-1", aria: { label: '編集' } do %>
+                    <i class="bi bi-pencil-fill"></i>
+                    <% end %>
+                    <%= link_to '#', id: "delete-#{question.id}", method: :delete, data: { confirm: '本当に削除しますか？' }, class: "btn btn-outline-danger btn-sm", aria: { label: '削除' } do %>
+                    <i class="bi bi-trash-fill"></i>
+                    <% end %>
+                </div>
+                </div>
+                <ul class="list-inline mt-2 meta">
+                <li class="list-inline-item">
+                    <i class="bi bi-calendar"></i> <%= l question.created_at, format: '%Y/%m/%d' %>
+                </li>
+                </ul>
+                <p class="body"><%= truncate(question.body, length: 100) %></p>
+            </div>
+            </div>
+        </div>
+        <% end %>
+    <% else %>
+        <p class="no-questions">質問はまだありません。</p>
+    <% end %>
+    </div>
+</div>
+</div>
