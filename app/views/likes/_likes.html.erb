@@ -1,7 +1,7 @@
 <div id="like-button-for-question-<%= question.id %>">
-<% if current_user && question.likes.exists?(user: current_user) %>
-    <%= button_to "♡", question_like_path(question, question.likes.find_by(user: current_user)), method: :delete, remote: true, data: { turbo: false }, class: 'like-button', id: "like-button-#{question.id}" %>
+<% if current_user && (like = question.likes.find_by(user: current_user)) %>
+    <%= button_to "♡", question_like_path(question, like), method: :delete, class: 'like-button', id: "like-button-#{question.id}" %>
 <% else %>
-    <%= button_to "♡", question_like_path, params: { like: { question_id: question.id, user_id: current_user.id } }, method: :post, remote: true, data: { turbo: false }, class: 'like-button', id: "like-button-#{question.id}" %>
+    <%= button_to "♡", question_likes_path(question_id: question.id), method: :post, class: 'like-button', id: "like-button-#{question.id}" %>
 <% end %>
 </div>

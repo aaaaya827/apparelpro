@@ -15,6 +15,10 @@ class User < ApplicationRecord
     likes.exists?(question_id: question.id)
   end
 
+  def like(question)
+    likes.find_or_create_by(question:)
+  end
+
   def unlike(question)
     likes.find_by(question:)&.destroy
   end
