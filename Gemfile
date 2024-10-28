@@ -42,6 +42,10 @@ gem 'jbuilder'
 
 gem 'devise'
 
+# Add OmniAuth for Google OAuth2
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
@@ -53,7 +57,14 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'dotenv-rails'
   gem 'debug', platforms: %i[mri windows]
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :development do
@@ -70,11 +81,5 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  gem 'rspec'
   gem 'selenium-webdriver'
 end
-
-gem 'rubocop', require: false
-gem 'rubocop-performance'
-gem 'rubocop-rails'
-gem 'rubocop-rspec'
