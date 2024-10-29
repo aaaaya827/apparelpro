@@ -42,9 +42,11 @@ gem 'jbuilder'
 
 gem 'devise'
 
-# Add OmniAuth for Google OAuth2
+# Googleログイン機能を追加するためのgem
 gem 'omniauth-google-oauth2'
-gem 'omniauth-rails_csrf_protection'
+
+# omniauthのバージョンを指定するためのgem
+gem 'omniauth', '1.9.1'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[windows jruby]

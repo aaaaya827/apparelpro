@@ -1,0 +1,14 @@
+.google-custom-button {
+    background-image: url('web_light_rd_SI@4x.png');
+    background-size: contain; // 画像をボタンにフィットさせる
+    background-repeat: no-repeat; // 画像を繰り返さない
+    color: transparent; // テキストを透明にする
+    border: none; // ボーダーを消す
+    width: 180px; // ボタンの幅を調整
+    height: 40px; // ボタンの高さを調整
+    cursor: pointer; // カーソルをポインタに
+    display: block;
+    margin-top: 40px;
+    margin: 0 auto; // 中央に配置
+    box-shadow: none !important;
+}

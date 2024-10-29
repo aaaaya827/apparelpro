@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get 'questions/new'
   get 'questions/create'
   devise_for :users, controllers: {
-    passwords: 'users/passwords'
+    passwords: 'users/passwords',
+    omniauth_callbacks: "users/omniauth_callbacks",
+    registrations: "users/registrations"
   }
 
   devise_scope :user do

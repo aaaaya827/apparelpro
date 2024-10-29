@@ -12,25 +12,6 @@
     <div>現在、確認待ちのメールアドレス: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password, "パスワード", class: 'newpassword-label' %> <span class="note-text">(変更したくない場合は空欄のままにしてください)</span><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em class="note-text">最低 <%= @minimum_password_length %> 文字必要です</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation, "パスワード確認", class: 'newpassword-label' %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password, "現在のパスワード", class: 'newpassword-label' %> <span class="note-text">(変更を確認するために必要です)</span><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
   <div class="actions">
     <%= f.submit "更新" %>
   </div>
