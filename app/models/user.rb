@@ -8,6 +8,21 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable,
          :omniauthable, omniauth_providers: %i[google_oauth2]
 
+  has_many :questions, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
+  def liked?(question)
+    likes.exists?(question_id: question.id)
+  end
+
+  def like(question)
+    likes.find_or_create_by(question:)
+  end
+
+  def unlike(question)
+    likes.find_by(question:)&.destroy
+  end
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       # ※deviseのuserカラムに nameやprofile を追加の場合はコメントアウトを外す

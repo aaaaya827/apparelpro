@@ -26,6 +26,8 @@
                 </li>
                 </ul>
                 <p class="body"><%= truncate(question.body, length: 100) %></p>
+
+                <%= render 'likes/likes', question: question %>
             </div>
             </div>
         </div>

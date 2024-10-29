@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @comment = Comment.new
     @comments = @question.comments.includes(:user).order(created_at: :desc)
+    @like = Like.first_or_create(user: current_user, question: @question)
   end
 
   def new
