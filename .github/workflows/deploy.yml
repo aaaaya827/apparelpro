@@ -3,7 +3,7 @@ name: Deploy to Render
 on:
   push:
     branches:
-      - main  # マージ後
+      - main
 
 jobs:
   deploy:
@@ -16,8 +16,9 @@ jobs:
       - name: Deploy to Render
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+          RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
         run: |
-          response=$(curl -s -o response.json -w "%{http_code}" -X POST https://api.render.com/deploy/svc-cprr5maj1k6c738cv3d0 \
+          response=$(curl -s -o response.json -w "%{http_code}" -X POST https://api.render.com/deploy/$RENDER_SERVICE_ID \
           -H "Authorization: Bearer $RENDER_API_KEY" \
           -H "Content-Type: application/json" \
           -d '{}')
