@@ -45,6 +45,9 @@ gem 'devise'
 # Googleログイン機能を追加するためのgem
 gem 'omniauth-google-oauth2'
 
+# CSRF対策を追加するためのgem
+gem 'omniauth-rails_csrf_protection'
+
 # omniauthのバージョンを指定するためのgem
 gem 'omniauth', '2.0.0'
 
