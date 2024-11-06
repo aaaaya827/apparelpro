@@ -1,6 +1,10 @@
 <div class="manual-list">
-<h1>マニュアル一覧</h1>
-<% @categories.each do |manual| %>
-    <%= link_to manual.category, manual_path(category: manual.category), class: "btn btn-primary category-button" %>
-<% end %>
+    <h1 class="manual-title">マニュアル一覧</h1>
+    <div class="manual-container">
+        <% @categories.each do |manual| %>
+            <div class="manual-item">
+                <%= link_to manual.category, manual_path(category: manual.category), class: "btn btn-primary category-button" %>
+            </div>
+        <% end %>
+    </div>
 </div>
