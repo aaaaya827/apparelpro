@@ -1,38 +1,21 @@
-.manual-list {
-    background-image: url('rue-s-3fl4czp80eg-unsplash.jpg');
+.manual-details {
     width: 100%;
-    height: calc(100vh - 134px);
-    position: relative;
+    min-height: calc(100vh - 80px); /* フッターの高さを差し引いた最小高さ */
     background-position: center;
     background-size: cover;
-    overflow-y: auto;
-
+    overflow-y: auto; /* 縦方向にスクロールを許可 */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-
-    padding-top: 90px; /* ヘッダーの高さ */
-    padding-bottom: 67px; /* フッターの高さ */
+    padding: 50px 20px 100px; /* フッターと重ならないように下に十分な余白 */
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
 }
 
 .manual-content {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
-
-    .title {
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    .points {
-        list-style-type: disc;
-        margin-left: 20px;
-
-        li {
-            margin-bottom: 5px;
-        }
-    }
+    width: 100%; /* 幅を100%に設定して、内容を整える */
+    max-width: 800px; /* 最大幅を設定して読みやすく */
 }
