@@ -23,7 +23,9 @@ Rails.application.routes.draw do
 
   get 'up' => 'rails/health#show', as: :rails_health_check
 
-  resources :manuals, only: %i[index show], param: :category
+  resources :manuals, only: %i[index show], param: :category do
+    post 'complete', on: :member
+  end
 
   root 'static_pages#top'
 end

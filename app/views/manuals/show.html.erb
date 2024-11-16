@@ -2,6 +2,6 @@
 <% @manuals.each do |manual| %>
 <h2><%= manual.title %></h2>
 <p><%= simple_format(manual.content) %></p>
+<%= button_to '完了', complete_manual_path(manual), method: :post, class: "btn btn-secondary", params: { id: manual.id } %>
 <% end %>
-<%= link_to '完了', manuals_path, class: "btn btn-secondary" %>
 </div>

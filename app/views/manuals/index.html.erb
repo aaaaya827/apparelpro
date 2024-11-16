@@ -7,4 +7,9 @@
             </div>
         <% end %>
     </div>
+
+  <!-- 進捗グラフ -->
+   <div class="progress-chart-container">
+        <canvas id="myChart-beginner" data-progress="<%= session[:progress_value] || 0 %>" style="width: 116px; height: 116px;" width="232" height="232"></canvas>
+    </div>
 </div>
