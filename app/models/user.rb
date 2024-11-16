@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   has_many :questions, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :progresses, dependent: :destroy
 
   def liked?(question)
     likes.exists?(question_id: question.id)
