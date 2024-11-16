@@ -8,6 +8,7 @@
     text-align: center;
     padding: 30px 20px 100px; /* フッターと重ならないように下に十分な余白 */
     box-sizing: border-box; /* パディングを含めて幅を計算 */
+    position: relative;
 }
 
 .manual-title {
@@ -28,7 +29,7 @@
 }
 
 .category-button {
-    margin-top: 25px;
+    margin-top: 40px;
     font-size: 1.4em;
     background-color: #ffffff;
     color: #696969;
@@ -52,4 +53,17 @@
     color: #000000;
     transform: translateY(-4px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/*進捗機能*/
+.progress-chart-container {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    z-index: 10;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
 }

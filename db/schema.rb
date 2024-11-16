@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_10_30_065823) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_08_015400) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_30_065823) do
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "progresses", force: :cascade do |t|
+    t.integer "manual_id", null: false
+    t.integer "user_id", null: false
+    t.boolean "completed", default: false
+    t.integer "progress", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "manual_id"], name: "index_progresses_on_user_id_and_manual_id", unique: true
   end
 
   create_table "questions", force: :cascade do |t|
@@ -81,4 +91,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_30_065823) do
   add_foreign_key "comments", "users"
   add_foreign_key "likes", "questions"
   add_foreign_key "likes", "users"
+  add_foreign_key "progresses", "manuals"
+  add_foreign_key "progresses", "users"
 end
