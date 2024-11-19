@@ -27,5 +27,7 @@ Rails.application.routes.draw do
     post 'complete', on: :member
   end
 
+  resources :notifications, only: :index
+
   root 'static_pages#top'
 end
