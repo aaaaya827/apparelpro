@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
+      @question.create_notification_comment!(current_user, @comment.id)
       respond_to do |format|
         format.turbo_stream # Turbo Streamでの非同期更新
         format.html { redirect_to @question }
