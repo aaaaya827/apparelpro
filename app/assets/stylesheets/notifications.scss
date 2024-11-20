@@ -1,0 +1,71 @@
+.no-notifications {
+    margin-top: 2%;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+.notification-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.2rem 0.6rem;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+
+    .notification-content {
+      display: flex;
+      flex-direction: column;
+
+      .notification-text {
+        font-size: 1rem;
+        color: #333;
+
+        .notification-visitor-name {
+          font-weight: bold;
+          color: #007bff;
+        }
+
+        .notification-link {
+          font-weight: bold;
+          text-decoration: none;
+          color: #007bff;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .notification-question-owner {
+          .notification-question-owner-name {
+            color: #555;
+          }
+        }
+      }
+
+      .notification-comment {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: #666;
+      }
+    }
+  
+    .notification-meta {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 1rem;
+  
+      .notification-date {
+        font-style: italic;
+      }
+    }
+  
+    .notification-divider {
+      margin: 1rem 0;
+      border: 0;
+      height: 1px;
+      background-color: #e0e0e0;
+    }
+  }

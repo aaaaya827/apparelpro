@@ -1,0 +1,38 @@
+<% visitor = notification.visitor %>
+<% visited = notification.visited %>
+<div class="notification-container">
+  <div class="notification-content">
+    <span class="notification-text">
+      <strong class="notification-visitor-name">
+        <%= visitor.name %>
+      </strong>
+      さんが
+
+    <% if notification.question.user_id == visited.id %>
+    <%= link_to 'あなたの質問', notification.question, class: "notification-link" %>
+    <% else %>
+    <span class="notification-question-owner">
+    <%= link_to notification.question, class: "notification-link" do %>
+    <strong class="notification-question-owner-name">
+    <%= notification.question.user.name + 'さんの質問' %>
+    </strong>
+    <% end %>
+    </span>
+    <% end %>
+    にコメントしました
+    </span>
+
+    <% if notification.comment&.comment_content %>
+    <p class="notification-comment">
+    <%= notification.comment.comment_content %>
+      </p>
+    <% end %>
+  </div>
+
+  <div class="notification-meta">
+    <span class="notification-date">
+      <%= notification.created_at.strftime("%Y年%m月%d日 %H:%M") %>
+    </span>
+  </div>
+  <hr class="notification-divider">
+</div>
