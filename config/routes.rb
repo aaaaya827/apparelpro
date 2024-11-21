@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'terms', to: 'pages#terms'
+  get 'privacy_policy', to: 'pages#privacy_policy'
   get 'questions/new'
   get 'questions/create'
   devise_for :users, controllers: {
