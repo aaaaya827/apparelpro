@@ -1,0 +1,33 @@
+<h1 class="contact-form-title">お問い合わせフォーム</h1>
+
+<%= form_with model: @contact, local: true, html: { class: 'contact-form' } do |form| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation" class="contact-error-messages">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <ul>
+        <% @contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="contact-form-group">
+    <%= form.label :name, class: 'contact-form-label' %>
+    <%= form.text_field :name, class: 'contact-form-input' %>
+  </div>
+
+  <div class="contact-form-group">
+    <%= form.label :email, class: 'contact-form-label' %>
+    <%= form.email_field :email, class: 'contact-form-input' %>
+  </div>
+
+  <div class="contact-form-group">
+    <%= form.label :message, class: 'contact-form-label' %>
+    <%= form.text_area :message, class: 'contact-form-textarea' %>
+  </div>
+
+  <div class="contact-form-group">
+    <%= form.submit "送信", class: 'contact-form-submit' %>
+  </div>
+<% end %>
