@@ -17,8 +17,8 @@
 .signup-form-container {
     border: 1px solid #ccc; /* 枠線の色と太さ */
     border-radius: 5px; /* 角を丸くする */
-    padding: 10px; /* 内側の余白 */
-    max-width: 150px; /* 最大幅 */
+    padding: 5px; /* 内側の余白 */
+    max-width: 120px; /* 最大幅 */
     margin: 0 auto; /* 中央に配置 */
     background-color: #f9f9f9; /* 背景色 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を追加 */
@@ -26,7 +26,7 @@
 
 .center-text {
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-align: center;
 }
 
@@ -45,7 +45,7 @@
 .field input[type="password"],
 .field input[type="checkbox"] {
     width: 100%;
-    padding: 6px;
+    padding: 4px;
     border: 1px solid #ced4da;
 }
 
