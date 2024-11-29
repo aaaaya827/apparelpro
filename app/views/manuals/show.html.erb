@@ -1,7 +1,7 @@
 <div class="manual-details">
 <% @manuals.each do |manual| %>
-<h2><%= manual.title %></h2>
-<p><%= simple_format(manual.content) %></p>
+<h2 class="manual-show-title"><%= manual.title %></h2>
+<p class="manual-show-content"><%= simple_format(manual.content) %></p>
 <%= button_to '完了', complete_manual_path(manual), method: :post, class: "btn btn-secondary", params: { id: manual.id } %>
 <% end %>
 </div>

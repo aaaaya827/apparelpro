@@ -15,6 +15,7 @@
     padding: 7px;
     color: #696969;
     border-radius: 10px;
+    font-size: 2.0em;
 }
 
 .manual-container {
@@ -25,12 +26,12 @@
 }
 
 .manual-item {
-    margin: 14px;
+    margin: 12px;
 }
 
 .category-button {
     margin-top: 40px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     background-color: #ffffff;
     color: #696969;
     padding: 20px;
@@ -38,8 +39,8 @@
     border: 1px solid #e0e0e0;
     outline: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    height: 120px;
+    width: 220px;
+    height: 110px;
     text-align: center;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 500;
@@ -58,8 +59,8 @@
 /*進捗機能*/
 .progress-chart-container {
     position: absolute;
-    top: 20px;
-    right: 70px;
+    top: 17px;
+    right: 60px;
     z-index: 10;
 }
 
