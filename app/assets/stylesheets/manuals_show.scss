@@ -12,10 +12,16 @@
     box-sizing: border-box; /* パディングを含めて幅を計算 */
 }
 
-.manual-content {
-    font-size: 16px;
-    line-height: 1.5;
+.manual-show-title {
+    font-size: 23px; /* タイトルのフォントサイズ */
+    line-height: 1.2; /* 行の高さ */
+    margin-bottom: 10px; /* タイトルの下の余白 */
+}
+
+.manual-show-content {
+    font-size: 5px;
+    line-height: 1.0;
     margin-bottom: 20px;
     width: 100%; /* 幅を100%に設定して、内容を整える */
-    max-width: 800px; /* 最大幅を設定して読みやすく */
+    max-width: 600px; /* 最大幅を設定して読みやすく */
 }

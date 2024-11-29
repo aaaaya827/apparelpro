@@ -4,26 +4,27 @@
     font-weight: normal;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
     text-align: center; /* 中央寄せにする */
-    margin-top: 60px; /* 上のマージンを追加して距離をあける */
+    margin-top: 70px; /* 上のマージンを追加して距離をあける */
+    font-size: 2.0em;
 }
 
 .form-container {
-    width: 550px; /* 幅を大きくする */
-    margin: 50px auto 0; /* 上に150pxのマージンを追加 */
-    padding: 50px;
+    width: 500px; /* 幅を大きくする */
+    margin: 40px auto 0; /* 上に150pxのマージンを追加 */
+    padding: 30px;
     border: 1px solid #ccc;
     border-radius: 10px; /* 角を丸くする */
     box-shadow: 0 5px 30px rgba(0,0,0,0.1);
 }
 
 .form-group {
-    margin-bottom: 20px; /* 各フォームグループの間隔をあける */
+    margin-bottom: 15px; /* 各フォームグループの間隔をあける */
     text-align: left; /* 本文を左寄せにするため、明示的に指定 */
 }
 
 .form-group textarea {
     width: 100%; /* 幅を親要素に合わせる */
-    height: 130px; /* 高さを調整して広げる */
+    height: 120px; /* 高さを調整して広げる */
 }
 
 .button-container {
@@ -45,7 +46,7 @@
 
 .sub-title {
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: #333;
 
     .link {
@@ -75,39 +76,40 @@
 }
 
 .meta {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #888;
 }
 
 .body {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     color: #555;
-    line-height: 1.6;
-    font-size: 0.95rem;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
 
 .no-questions {
     text-align: center;
     color: #999;
     font-style: italic;
+    font-size: 0.85rem;
 }
 
 /* 質問詳細画面 */
 .edit-container {
-    max-width: 550px; /* 幅を広げるために値を変更 */
-    margin: 50px auto; /* 上の余白を増やしてヘッダーからの距離を広げる */
-    padding: 50px; /* 内側の余白を増やして縦の幅を伸ばす */
+    max-width: 500px; /* 幅を広げるために値を変更 */
+    margin: 40px auto; /* 上の余白を増やしてヘッダーからの距離を広げる */
+    padding: 40px; /* 内側の余白を増やして縦の幅を伸ばす */
     background: #f9f9f9; /* 背景色 */
     border-radius: 10px; /* コーナーを丸くする */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 影を付ける */
 }
 
 .edit-group {
-    margin-bottom: 20px; /* 各フォームグループの間隔をあける */
+    margin-bottom: 15px; /* 各フォームグループの間隔をあける */
     text-align: left; /* 本文を左寄せにするため、明示的に指定 */
 }
 
 .edit-group textarea {
     width: 100%; /* 幅を親要素に合わせる */
-    height: 130px; /* 高さを調整して広げる */
+    height: 110px; /* 高さを調整して広げる */
 }
