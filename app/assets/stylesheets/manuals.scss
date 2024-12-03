@@ -68,3 +68,36 @@ canvas {
     max-width: 100%;
     height: auto;
 }
+
+@media (max-width: 768px) {
+    .manual-list {
+        padding: 20px 10px 80px; /* パディングを縮小 */
+    }
+
+    .manual-title {
+        font-size: 1.5em; /* タイトルのフォントサイズを縮小 */
+        padding: 5px;
+    }
+
+    .manual-container {
+        flex-direction: column; /* 項目を縦並びに */
+        align-items: center;
+    }
+
+    .manual-item {
+        margin: 10px; /* スペースを調整 */
+        width: 90%; /* 幅を調整して中央に配置 */
+    }
+
+    .category-button {
+        font-size: 1em; /* フォントサイズを縮小 */
+        padding: 15px; /* パディングを調整 */
+        width: 180px; /* 幅を縮小 */
+        height: 90px; /* 高さを縮小 */
+    }
+
+    .progress-chart-container {
+        top: 10px; /* 上の位置を調整 */
+        right: 20px; /* 右の位置を調整 */
+    }
+}
