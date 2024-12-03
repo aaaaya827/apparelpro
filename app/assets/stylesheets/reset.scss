@@ -61,3 +61,30 @@
     text-align: center;
     margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+    .password-reset {
+      margin-top: 60px; /* スマホ用にマージンを調整 */
+    }
+  
+    .password-reset-form {
+      max-width: 90%; /* フォームの最大幅を調整 */
+    }
+  
+    .account-edit {
+      margin-top: 50px; /* スマホ用にマージンを調整 */
+    }
+  
+    .account-edit-form {
+      max-width: 90%; /* フォームの最大幅を調整 */
+    }
+  
+    .custom-button {
+      font-size: 14px; /* スマホ用にボタンのフォントサイズを小さく */
+      padding: 10px; /* スマホ用にパディングを調整 */
+    }
+  
+    .back-link {
+      font-size: 12px; /* スマホ用にフォントサイズを小さく */
+    }
+  }

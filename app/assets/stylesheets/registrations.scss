@@ -73,3 +73,20 @@
 .actions input[type="submit"]:hover {
     background-color: #5f9ea0;
 }
+
+@media (max-width: 768px) {
+    .signup-form-container {
+        max-width: 85%; /* 最大幅を少し狭く */
+        padding: 8px; /* 内側の余白を少し減らす */
+    }
+
+    .field input[type="text"],
+    .field input[type="email"],
+    .field input[type="password"] {
+        padding: 8px; /* スマホ用にパディングを少し減らす */
+    }
+
+    .actions input[type="submit"] {
+        padding: 10px; /* ボタンのパディングを少し減らす */
+    }
+}

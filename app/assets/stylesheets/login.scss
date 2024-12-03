@@ -75,3 +75,29 @@
     margin-top: 20px; /* ログインボタンとリンクの距離を調整 */
     text-align: center; /* テキストを中央に配置 */
 }
+
+@media (max-width: 768px) {
+    .login-form-container {
+        padding: 15px; /* 内側の余白を少し減らす */
+        max-width: 90%; /* 最大幅はそのまま */
+        margin-top: 20px; /* ヘッダーとの距離を調整 */
+    }
+
+    .center-text {
+        margin-top: 5px; /* ヘッダーからの距離を減らす */
+        margin-bottom: 15px; /* マージン調整 */
+    }
+
+    .field input[type="email"],
+    .field input[type="password"] {
+        padding: 10px; /* 入力フィールドのパディングを少し減らす */
+    }
+
+    .actions input[type="submit"] {
+        padding: 10px; /* ボタンのパディングを少し減らす */
+    }
+
+    .extra-links {
+        margin-top: 5px; /* マージン調整 */
+    }
+}

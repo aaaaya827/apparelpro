@@ -14,3 +14,15 @@
     background-color: red; /* クリック後の背景色を赤に変更 */
     border-radius: 5px; /* ボタンの角を丸くするオプション */
 }
+
+@media (max-width: 768px) {
+    .like-button {
+        bottom: 15px; /* ボタンの下部の余白を縮小 */
+        right: 15px; /* ボタンの右部の余白を縮小 */
+        font-size: 28px; /* ハートのサイズを少し大きくしてタッチしやすく */
+    }
+
+    .like-button-click {
+        font-size: 28px; /* クリック後のハートのサイズも大きくする */
+    }
+}

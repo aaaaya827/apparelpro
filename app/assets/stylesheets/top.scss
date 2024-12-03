@@ -50,27 +50,26 @@
   background-color: #87ceeb;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 768px) {
+  .top-wrapper {
+    height: calc(100vh - 100px); /* スマホ用に高さ調整 */
+  }
+
   .title {
-      font-size: 2.5rem;
-      line-height: 4;
-      letter-spacing: 2px;
+    font-size: 2.5rem; /* スマホ用にフォントサイズを小さく */
   }
 
   .subtitle {
-      font-size: 1rem;
-      line-height: 2.5;
-      letter-spacing: 2px;
+    font-size: 1.2rem; /* スマホ用にフォントサイズを小さく */
   }
 
   .description {
-      margin-top: 10px; /* モバイル用の間隔を追加 */
-      font-size: 1rem; /* フォントサイズを設定 */
+    font-size: 1rem; /* スマホ用にフォントサイズを小さく */
+    margin-top: 30px; /* スマホ用に間隔を調整 */
   }
 
   .button {
-    margin-top: 20px; /* モバイル用の間隔を調整 */
-    font-size: 14px; /* フォントサイズを小さくする */
-    padding: 8px 16px; /* パディングを小さくする */
+    padding: 8px 16px; /* スマホ用にボタンのパディングを調整 */
+    font-size: 14px; /* スマホ用にフォントサイズを小さく */
   }
 }

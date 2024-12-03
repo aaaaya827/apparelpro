@@ -77,4 +77,40 @@
 .contact-error-messages li {
     color: #d9534f;
     font-size: 0.9rem;
+
+}
+
+@media (max-width: 768px) {
+    .contact-form-title {
+        font-size: 1.6rem; /* フォントサイズを少し小さくしてスペースを有効活用 */
+        margin-top: 50px; /* スマホでは少し上に余白を縮小 */
+    }
+
+    .contact-form {
+        max-width: 90%; /* 最大幅を90%に設定して、画面サイズに合わせて調整 */
+        padding: 10px; /* スマホ用に内側の余白を少なく */
+    }
+
+    .contact-form-group {
+        margin-bottom: 15px; /* スマホではフォーム間の余白を広めに */
+    }
+
+    .contact-form-label {
+        font-size: 1rem; /* ラベルのフォントサイズを少し小さく */
+    }
+
+    .contact-form-input, .contact-form-textarea {
+        font-size: 0.9rem; /* 入力フォームのフォントサイズを少し小さく */
+        padding: 10px; /* 入力フォームのパディングを広めに */
+    }
+
+    .contact-form-submit {
+        padding: 10px; /* ボタンのパディングを広げて、タッチしやすく */
+        font-size: 1rem; /* ボタンのフォントサイズを少し大きく */
+    }
+
+    .contact-error-messages {
+        font-size: 0.8rem; /* エラーメッセージのフォントサイズを小さく */
+        padding: 8px; /* エラーメッセージの内側の余白を少なく */
+    }
 }

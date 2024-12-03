@@ -112,4 +112,49 @@
 .edit-group textarea {
     width: 100%; /* 幅を親要素に合わせる */
     height: 110px; /* 高さを調整して広げる */
+  
+}
+
+@media (max-width: 768px) {
+    .question-title {
+        font-size: 1.2em; /* フォントサイズを縮小 */
+        margin-top: 50px; /* マージンを調整 */
+    }
+
+    .form-container {
+        width: 90%; /* 幅を画面の90%に設定 */
+        margin: 20px auto; /* 上下の余白を縮小 */
+        padding: 20px; /* 内側の余白を縮小 */
+    }
+
+    .form-group textarea {
+        height: 100px; /* テキストエリアの高さを縮小 */
+    }
+
+    .question-card {
+        padding: 10px; /* カード内の余白を調整 */
+    }
+
+    .sub-title {
+        font-size: 1rem; /* サブタイトルのフォントサイズを調整 */
+    }
+
+    .buttons .btn {
+        font-size: 0.9rem; /* ボタンのフォントサイズを小さく */
+        padding: 8px 12px; /* ボタンのパディングを調整 */
+    }
+
+    .edit-container {
+        width: 90%; /* 編集フォームの幅を縮小 */
+        padding: 20px; /* 内側の余白を縮小 */
+        margin: 20px auto; /* マージンを調整 */
+    }
+
+    .edit-group textarea {
+        height: 100px; /* テキストエリアの高さを縮小 */
+    }
+
+    .no-questions {
+        font-size: 0.8rem; /* テキストのフォントサイズを小さく */
+    }
 }

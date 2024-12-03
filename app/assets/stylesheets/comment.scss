@@ -21,3 +21,26 @@
     font-size: 14px;
     padding: 6px 10px;
 }
+
+@media (max-width: 768px) {
+    .question-detail-title {
+        font-size: 12px; /* スマホではタイトルを小さくして、スペースを有効活用 */
+        margin-top: 10px; /* マージンを調整して、タイトルとコンテンツの距離を縮小 */
+    }
+
+    .comment-textarea {
+        font-size: 12px; /* テキストエリアのフォントサイズを少し大きく */
+        padding: 10px; /* 入力領域のパディングを広げて、タッチしやすく */
+        margin-bottom: 10px; /* フォーム間の余白を調整 */
+    }
+
+    .form-label {
+        font-size: 0.9rem; /* ラベルのフォントサイズを少し小さく */
+        margin-bottom: 8px; /* ラベルと入力フォームの距離を縮めて、スペースを有効活用 */
+    }
+
+    .btn-submit {
+        font-size: 16px; /* ボタンのフォントサイズを少し大きく */
+        padding: 10px 15px; /* ボタンのパディングを広げて、タッチしやすく */
+    }
+}
