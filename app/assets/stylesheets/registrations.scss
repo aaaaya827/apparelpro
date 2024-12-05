@@ -1,27 +1,27 @@
 .signup-background {
-    background-image: url('mediamodifier.jpg'); /* 背景画像の設定 */
+    background-image: url('mediamodifier.jpg');
     background-position: center;
     background-size: cover;
-    background-attachment: fixed; /* 背景を固定する */
+    background-attachment: fixed;
     width: 100%;
-    height: calc(100vh - 134px);
+    min-height: calc(100vh - 80px);
     display: flex;
-    flex-direction: column; /* 縦に要素を配置 */
-    align-items: center; /* 水平方向の中央揃え */
-    justify-content: center; /* 垂直方向の中央揃え */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* 内部の余白や枠線のサイズを全体のサイズに含める */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding: 50px 20px 100px;
 }
 
 .signup-form-container {
-    border: 1px solid #ccc; /* 枠線の色と太さ */
-    border-radius: 5px; /* 角を丸くする */
-    padding: 4px; /* 内側の余白 */
-    max-width: 110px; /* 最大幅 */
-    margin: 0 auto; /* 中央に配置 */
-    background-color: #f9f9f9; /* 背景色 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 40px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* 角を少し丸くする */
 }
 
 .center-text {
@@ -76,17 +76,23 @@
 
 @media (max-width: 768px) {
     .signup-form-container {
-        max-width: 85%; /* 最大幅を少し狭く */
-        padding: 8px; /* 内側の余白を少し減らす */
+        max-width: 90%;
+        padding: 4px; /* 内側の余白をもう少し減らす */
+        margin-top: 0px;
+    }
+
+    .center-text {
+        margin-top: 5px;
+        margin-bottom: 10px;
     }
 
     .field input[type="text"],
     .field input[type="email"],
     .field input[type="password"] {
-        padding: 8px; /* スマホ用にパディングを少し減らす */
+        padding: 4px; /* スマホ用にパディングを適切な値に戻す */
     }
 
     .actions input[type="submit"] {
-        padding: 10px; /* ボタンのパディングを少し減らす */
+        padding: 5px; /* ボタンのパディングを少し減らす */
     }
 }

@@ -82,13 +82,13 @@
 
 @media (max-width: 768px) {
     .contact-form-title {
-        font-size: 1.6rem; /* フォントサイズを少し小さくしてスペースを有効活用 */
+        font-size: 1.4rem; /* フォントサイズをさらに小さく */
         margin-top: 50px; /* スマホでは少し上に余白を縮小 */
     }
 
     .contact-form {
-        max-width: 90%; /* 最大幅を90%に設定して、画面サイズに合わせて調整 */
-        padding: 10px; /* スマホ用に内側の余白を少なく */
+        max-width: 80%; /* 最大幅を80%に設定して、画面サイズに合わせて調整 */
+        padding: 8px; /* スマホ用に内側の余白をさらに少なく */
     }
 
     .contact-form-group {
@@ -96,21 +96,16 @@
     }
 
     .contact-form-label {
-        font-size: 1rem; /* ラベルのフォントサイズを少し小さく */
+        font-size: 0.9rem; /* ラベルのフォントサイズを少し小さく */
     }
 
     .contact-form-input, .contact-form-textarea {
-        font-size: 0.9rem; /* 入力フォームのフォントサイズを少し小さく */
-        padding: 10px; /* 入力フォームのパディングを広めに */
+        font-size: 0.8rem; /* 入力フォームのフォントサイズを少し小さく */
+        padding: 8px; /* 入力フォームのパディングを少なく */
     }
 
     .contact-form-submit {
-        padding: 10px; /* ボタンのパディングを広げて、タッチしやすく */
-        font-size: 1rem; /* ボタンのフォントサイズを少し大きく */
-    }
-
-    .contact-error-messages {
-        font-size: 0.8rem; /* エラーメッセージのフォントサイズを小さく */
-        padding: 8px; /* エラーメッセージの内側の余白を少なく */
+        padding: 8px; /* ボタンのパディングを少なく */
+        font-size: 0.9rem; /* ボタンのフォントサイズを少し小さく */
     }
 }
