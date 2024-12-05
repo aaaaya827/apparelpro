@@ -1,15 +1,17 @@
 .login-background {
-    background-image: url('mediamodifier.jpg'); /* 背景画像の設定 */
+    background-image: url('mediamodifier.jpg');
     background-position: center;
     background-size: cover;
-    background-attachment: fixed; /* 背景を固定する */
+    background-attachment: fixed;
     width: 100%;
-    height: calc(100vh - 134px); /* ヘッダーの高さを引く */
+    min-height: calc(100vh - 80px);
     display: flex;
-    flex-direction: column; /* 縦に要素を配置 */
-    align-items: center; /* 水平方向の中央揃え */
-    justify-content: center; /* 垂直方向の中央揃え */
-    box-sizing: border-box; /* 内部の余白や枠線のサイズを全体のサイズに含める */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding: 50px 20px 100px;
 }
 
 .login-form-container {
@@ -78,26 +80,26 @@
 
 @media (max-width: 768px) {
     .login-form-container {
-        padding: 15px; /* 内側の余白を少し減らす */
-        max-width: 90%; /* 最大幅はそのまま */
-        margin-top: 20px; /* ヘッダーとの距離を調整 */
+        padding: 10px;
+        max-width: 90%;
+        margin-top: 0;
     }
 
     .center-text {
-        margin-top: 5px; /* ヘッダーからの距離を減らす */
-        margin-bottom: 15px; /* マージン調整 */
+        margin-top: 0px;
+        margin-bottom: 20px;
     }
 
     .field input[type="email"],
     .field input[type="password"] {
-        padding: 10px; /* 入力フィールドのパディングを少し減らす */
+        padding: 8px;
     }
 
     .actions input[type="submit"] {
-        padding: 10px; /* ボタンのパディングを少し減らす */
+        padding: 8px;
     }
 
     .extra-links {
-        margin-top: 5px; /* マージン調整 */
+        margin-top: 5px;
     }
 }

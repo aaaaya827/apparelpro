@@ -42,31 +42,24 @@
     }
   }
 
-  @media (max-width: 768px) {
-    .terms-page {
-      padding: 0 10px; /* スマホ用にパディングを調整 */
-    }
-  
+  @media (max-width: 600px) {
     .terms-title {
-      font-size: 1.5rem; /* スマホ用にフォントサイズを小さく */
-      margin-top: 10px; /* スマホ用にマージンを調整 */
+        font-size: 1.5rem; /* スマホではフォントサイズを小さく */
     }
-  
+
     .terms-intro {
-      font-size: 0.9rem; /* スマホ用にフォントサイズを小さく */
+        font-size: 0.9rem; /* フォントサイズを小さく */
     }
-  
+
     .terms-section-title {
-      font-size: 1.2rem; /* スマホ用にフォントサイズを小さく */
-      margin-top: 20px; /* スマホ用にマージンを調整 */
+        font-size: 1.2rem; /* フォントサイズを小さく */
     }
-  
+
     .terms-list {
-      margin-left: 10px; /* スマホ用に左マージンを調整 */
-      margin-bottom: 10px; /* スマホ用に下マージンを調整 */
+        margin-left: 10px; /* 左のマージンを小さく */
     }
-  
+
     .terms-list li {
-      font-size: 0.9rem; /* スマホ用にフォントサイズを小さく */
+        font-size: 0.9rem; /* フォントサイズを小さく */
     }
-  }
+}

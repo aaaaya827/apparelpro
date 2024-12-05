@@ -1,10 +1,11 @@
 .top-wrapper {
   background-image: url('ting-IUyNg1VYMTQ-unsplash.jpg');
   width: 100%;
-  height: calc(100vh - 134px);
+  min-height: calc(100vh - 80px);
   position: relative;
   background-position: center;
   background-size: cover;
+  overflow-y: auto;
 }
 
 .top-inner-text {
@@ -52,24 +53,25 @@
 
 @media (max-width: 768px) {
   .top-wrapper {
-    height: calc(100vh - 100px); /* スマホ用に高さ調整 */
+    height: calc(100vh - 150px);
+    margin-bottom: 50px;
   }
 
   .title {
-    font-size: 2.5rem; /* スマホ用にフォントサイズを小さく */
+    font-size: 2.5rem;
   }
 
   .subtitle {
-    font-size: 1.2rem; /* スマホ用にフォントサイズを小さく */
+    font-size: 1.2rem;
   }
 
   .description {
-    font-size: 1rem; /* スマホ用にフォントサイズを小さく */
-    margin-top: 30px; /* スマホ用に間隔を調整 */
+    font-size: 1rem;
+    margin-top: 30px;
   }
 
   .button {
-    padding: 8px 16px; /* スマホ用にボタンのパディングを調整 */
-    font-size: 14px; /* スマホ用にフォントサイズを小さく */
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }
