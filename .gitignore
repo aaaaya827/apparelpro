@@ -67,3 +67,6 @@ docker-compose.override.yml
 /byebug_history
 /spring/*
 /selenium-debug.log
+
+# Ignore Yarn error log.
+yarn-error.log
