@@ -10,7 +10,7 @@
 
 .top-inner-text {
   position: absolute;
-  top: 50%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -53,25 +53,33 @@
 
 @media (max-width: 768px) {
   .top-wrapper {
-    height: calc(100vh - 150px);
-    margin-bottom: 50px;
+    min-height: calc(100vh - 80px); /* 高さを調整 */
+    padding: 20px; /* パディングを追加 */
+    overflow-y: auto; /* スクロールを許可 */
+  }
+
+  .top-inner-text {
+    top: 40%; /* 縦位置を調整 */
+    font-size: 1.5rem; /* テキストのサイズを調整して読みやすく */
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* タイトルのサイズを小さく */
   }
 
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* サブタイトルのサイズを小さく */
+    margin-top: 5px; /* マージンを調整 */
   }
 
   .description {
-    font-size: 1rem;
-    margin-top: 30px;
+    margin-top: 30px; /* 間隔を調整 */
+    font-size: 1rem; /* フォントサイズを小さく */
   }
 
   .button {
-    padding: 8px 16px;
-    font-size: 14px;
+    margin-top: 30px; /* ボタンの間隔を調整 */
+    font-size: 14px; /* ボタンのフォントサイズを調整 */
+    padding: 8px 16px; /* パディングを調整 */
   }
 }

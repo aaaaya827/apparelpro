@@ -12,14 +12,22 @@
 }
 
 .form-label {
-    font-size: 1rem; /* フォントサイズを大きく */
-    margin-bottom: 10px; /* ラベルとフォームの距離をあける */
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 .btn-submit {
     // ボタンのスタイルを追加
     font-size: 14px;
     padding: 6px 10px;
+}
+
+.comment {
+    font-size: 13px;
+}
+
+.scrollable-comment {
+    overflow-y: auto;
 }
 
 @media (max-width: 768px) {
