@@ -24,7 +24,7 @@ https://apparel-pro.onrender.com/
 ▪️新人育成マニュアル一覧
 ▪️進捗管理機能
 [![Image from Gyazo](https://i.gyazo.com/ae982a2a2603090765333b95c5edfec5.gif)](https://gyazo.com/ae982a2a2603090765333b95c5edfec5)
-1〜20までのマニュアルが順番に表示され、各マニュアルのボタンをクリックすると詳細画面に移動します。完了ボタンをクリックすると、進捗管理グラフが更新される仕組みになっており、学ぶ側も育成する側も進捗状況を一目で把握することができます。
+1〜20までのマニュアルが順番に表示され、各マニュアルのボタンをクリックすると質問編集画面に移動します。完了ボタンをクリックすると、進捗管理グラフが更新される仕組みになっており、学ぶ側も育成する側も進捗状況を一目で把握することができます。
 
 ▪️質問投稿機能
 [![Image from Gyazo](https://i.gyazo.com/26c05e7032a355737b2864f5df1c8ecf.gif)](https://gyazo.com/26c05e7032a355737b2864f5df1c8ecf)
@@ -34,7 +34,15 @@ https://apparel-pro.onrender.com/
 
 ▪️コメント機能
 [![Image from Gyazo](https://i.gyazo.com/acb45bf1789715a94e52bed5f86cb1ef.gif)](https://gyazo.com/acb45bf1789715a94e52bed5f86cb1ef)
+質問投稿一覧の各投稿タイトルをクリックすると、質問詳細画面に移動します。質問詳細画面にはコメント投稿機能が備わっており、投稿に対してコメントを残すことで、スタッフ間のコミュニケーションを深めることができます。
 
+その他の機能
+---
+▪️ユーザー機能
+
+▪️いいね機能
+
+▪️通知機能
 
 ### 画面遷移図
 Figma：https://www.figma.com/design/uqE5dc2VL1ivu5E2gZt7nz/%E7%84%A1%E9%A1%8C?node-id=0-1&t=jUwmAMrSuvQcbNtz-0
