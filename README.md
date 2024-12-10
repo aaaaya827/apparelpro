@@ -39,29 +39,28 @@ https://apparel-pro.onrender.com/
 その他の機能
 ---
 ▪️ユーザー機能
+[![Image from Gyazo](https://i.gyazo.com/9eff518db1d3ea9f643f79eecba544bd.gif)](https://gyazo.com/9eff518db1d3ea9f643f79eecba544bd)
+『名前』『メールアドレス』『パスワード』『確認用パスワード』を入力してユーザー登録を行います。
+ユーザー登録後は、自動的にログイン処理が行われるようになっており、そのまま直ぐにサービスを利用する事が出来る仕様です。また、Googleアカウントを用いてGoogleログインを行う事も可能です。
 
 ▪️いいね機能
+[![Image from Gyazo](https://i.gyazo.com/a054ad55972188a1fb78cf402df59bee.gif)](https://gyazo.com/a054ad55972188a1fb78cf402df59bee)
+質問投稿一覧では、いいね機能を実装しており、気軽に共感や賛同を示すことができます。これによって、スタッフ同士の交流が自然と生まれ、意見交換がしやすい雰囲気を作ります。
 
 ▪️通知機能
+[![Image from Gyazo](https://i.gyazo.com/b826e59112db17df956a10b7ba69640c.gif)](https://gyazo.com/b826e59112db17df956a10b7ba69640c)
+通知機能では、コメントの返信があった際に、リアルタイムでお知らせを受け取ることができます。これにより、重要なやり取りを見逃す心配がなく、スムーズなコミュニケーションをサポートします。
 
-### 画面遷移図
-Figma：https://www.figma.com/design/uqE5dc2VL1ivu5E2gZt7nz/%E7%84%A1%E9%A1%8C?node-id=0-1&t=jUwmAMrSuvQcbNtz-0
+▪️パスワードリセット機能・メールアドレス変更機能・アカウント削除機能
+[![Image from Gyazo](https://i.gyazo.com/df27426ff062eab27c0a0f205d7592fb.gif)](https://gyazo.com/df27426ff062eab27c0a0f205d7592fb)
+パスワードを忘れた場合、登録済みのメールアドレスからリセット手続きを行い、新しいパスワードを設定できます。また、アカウントに登録されたメールアドレスは、本人確認の上で簡単に変更可能です。さらに、不要になったアカウントをユーザー自身で削除できる機能も備えており、個人情報は安全に処理されます。
 
-### READMEに記載した機能
-- [✔️] ユーザー登録機能
-- [✔️] ログイン機能
-- [✔️] パスワード変更機能
-- [✔️] メールアドレス変更機能
-- [✔️] マニュアル閲覧機能
-- [✔️] 質問・意見投稿機能
-- [✔️] フィードバック機能(返信機能)
-- [✔️] 通知機能
-- [✔️] 「いいね」機能
+ 技術構成について
+---
 
-### メールアドレス・パスワード変更確認項目
-直接変更できるものではなく、一旦メールなどを介して専用のページで変更する画面遷移になっているか？
-- [✔️] メールアドレス
-- [✔️] パスワード
 
 ### ER図
 [![Image from Gyazo](https://i.gyazo.com/8aeb141fdf7bf916c98d0142d2026fe4.png)](https://gyazo.com/8aeb141fdf7bf916c98d0142d2026fe4)
+
+### 画面遷移図
+Figma：https://www.figma.com/design/uqE5dc2VL1ivu5E2gZt7nz/%E7%84%A1%E9%A1%8C?node-id=0-1&t=jUwmAMrSuvQcbNtz-0
